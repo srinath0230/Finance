@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+
+{% block title %}
+ History
+{% endblock %}
+
+{% block main %}
+
+
+
+
+<table class="table">
+    <thead><tr>
+        <th scope="col">symbols</th>
+        <th scope="col">shares</th>
+        <th scope="col">price</th>
+        <th scope="col">Date</th>
+      </tr></thead>
+      <tbody>
+        {% for row in transcations %}
+    <tr>
+        <td>{{row['symbol']}}</td>
+        <td>{{row['shares']}}</td>
+        <td>{{row['price']}}</td>
+        <td>{{row['date']}}</td>
+    </tr>
+
+    {% endfor %}
+</tbody>
+
+
+
+
+  </table>
+
+
+
+
+
+{% endblock %}
